@@ -54,7 +54,7 @@ require_once("function.php");
 
     /* Remove extra left and right margins, due to padding */
     .row {
-      margin: 0 150px;
+      /* margin: 0 150px; */
       display: flex;
     }
 
