@@ -44,19 +44,19 @@ if (!isset($_SESSION['username'])){
                     </tr>
                     <?php
                     require_once('db_login.php');
-                    $query = "SELECT * FROM pelanggan ORDER BY ID";
+                    $query = "SELECT * FROM pelanggan ORDER BY id_pelanggan";
                     $query_run = mysqli_query($con, $query);
                     if (mysqli_num_rows($query_run) > 0) {
                         foreach ($query_run as $pelanggan) {
                     ?>
                             <tr>
-                                <td><?= $pelanggan['ID'] ?></td>
+                                <td><?= $pelanggan['id_pelanggan'] ?></td>
                                 <td><?= $pelanggan['nama_depan'] ?></td>
                                 <td><?= $pelanggan['nama_belakang'] ?></td>
                                 <td><?= $pelanggan['no_telp'] ?></td>
                                 <td>
-                                    <button type="button" value="<?= $pelanggan['ID']; ?>" class="editPelangganBtn btn btn-warning btn-sm"><i class="fa-solid fa-user-pen"></i> Edit</button>
-                                    <button type="button" value="<?= $pelanggan['ID']; ?>" class="deletePelangganBtn btn btn-danger btn-sm"><i class="fa-solid fa-user-minus"></i> Delete</button>
+                                    <button type="button" value="<?= $pelanggan['id_pelanggan']; ?>" class="editPelangganBtn btn btn-warning btn-sm"><i class="fa-solid fa-user-pen"></i> Edit</button>
+                                    <button type="button" value="<?= $pelanggan['id_pelanggan']; ?>" class="deletePelangganBtn btn btn-danger btn-sm"><i class="fa-solid fa-user-minus"></i> Delete</button>
                                 </td>
                             </tr>
                     <?php

@@ -60,11 +60,11 @@ if (!isset($_SESSION['username'])) {
                                 <td><?= $transaksi['bayar'] ?></td>
                                 <td><?= $transaksi['kembalian'] ?></td>
                                 <td><?= $transaksi['waktu'] ?></td>
-                                <td><?= $transaksi['status'] ?></td>
+                                <td><?= $transaksi['status_pembayaran'] ?></td>
                                 <td>
                                     <button type="button" value="<?= $transaksi['id_transaksi']; ?>" class="editTransaksiBtn btn btn-warning btn-sm"><i class="fa-regular fa-file-plus"></i>Edit</button>
                                     <button type="button" value="<?= $transaksi['id_transaksi']; ?>" class="deleteTransaksiBtn btn btn-danger btn-sm"><i class="fa-regular fa-file-minus"></i>Delete</button>
-                                    </td>
+                                </td>
                             </tr>
                     <?php
                             $i++;
