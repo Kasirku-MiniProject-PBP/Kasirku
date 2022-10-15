@@ -1,6 +1,6 @@
 <?php
 session_start();
-if (!isset($_SESSION['username'])){
+if (!isset($_SESSION['username'])) {
     header('Location: login.php');
 }
 ?>
@@ -19,9 +19,9 @@ if (!isset($_SESSION['username'])){
 
 <body>
     <div class="d-flex flex-row">
-        <nav class="sticky"> 
+        <nav class="sticky">
             <?php
-                include ('nav/index.php');
+            include('nav/index.php');
             ?>
             <script>
                 document.getElementById('linkPelanggan').innerHTML = '<a href="#" class="text-start nav-link bg-info link-dark shadow rounded "><svg class="bi me-2" width="16" height="16"><use xlink:href="#people-circle"/></svg> Pelanggan</a>';
@@ -181,13 +181,13 @@ if (!isset($_SESSION['username'])){
 
             $.ajax({
                 type: "GET",
-                url: "CRUD_pelanggan.php?pelanggan_id=" + pelanggan_id,
+                url: "CRUD_pelanggan.php?id_pelanggan=" + pelanggan_id,
                 success: function(response) {
 
                     var res = jQuery.parseJSON(response);
                     if (res.status == 200) {
 
-                        $('#pelanggan_id').val(res.data.IDs);
+                        $('#pelanggan_id').val(res.data.id_pelanggan);
                         $('#name').val(res.data.nama_depan);
                         $('#nami').val(res.data.nama_belakang);
                         $('#notp').val(res.data.no_telp);
@@ -236,7 +236,7 @@ if (!isset($_SESSION['username'])){
                     url: "CRUD_pelanggan.php",
                     data: {
                         'delete_pelanggan': true,
-                        'pelanggan_id': pelanggan_id
+                        'id_pelanggan': pelanggan_id
                     },
                     success: function(response) {
 

@@ -157,9 +157,9 @@ if (!isset($_SESSION['username'])) {
                             <label for="mp">Metode Pembayaran</label>
                             <select name="mp" class="form-control">
                                 <option value="">-- Pilih Metode Pemabayaran --</option>
-                                <option value="lunas">Tunai</option>
-                                <option value="tidak">Dompet Digital</option>
-                                <option value="tidak">Kartu Kredit</option>
+                                <option value="Tunai">Tunai</option>
+                                <option value="Dompet Digital">Dompet Digital</option>
+                                <option value="Kartu Kredit">Kartu Kredit</option>
                             </select>
                         </div>
                         <div class="form-group">
@@ -245,7 +245,7 @@ if (!isset($_SESSION['username'])) {
                         $('#br').val(res.data.bayar);
                         $('#kn').val(res.data.kembalian);
                         $('#wt').val(res.data.waktu);
-                        $('#st').val(res.data.status);
+                        $('#sp').val(res.data.status_pembayaran);
                         $('#transaksiEditModal').modal('show');
                     }
                 }
