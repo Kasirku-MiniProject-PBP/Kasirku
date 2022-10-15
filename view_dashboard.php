@@ -150,7 +150,7 @@ require_once("function.php");
               <a href="view_jenis_barang.php">
                 <div class="card">
                   <br>
-                  <p>Kategori Barang-barang</p><br>
+                  <p>Kategori Barang</p><br>
                   <h3><?php echo getSumKategoriBarang() ?></h3>
                 </div>
               </a>
