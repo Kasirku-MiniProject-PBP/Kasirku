@@ -4,7 +4,7 @@ require 'db_login.php';
 
 // Tempat pengecekan Modal Add data 
 if (isset($_POST['add_pelanggan'])) {
-    $id_pelanggan = mysqli_real_escape_string($con, $_POST['pelanggan_id']);
+    $id_pelanggan = mysqli_real_escape_string($con, $_POST['id_pelanggan']);
     $nama_depan = mysqli_real_escape_string($con, $_POST['name']);
     $nama_belakang = mysqli_real_escape_string($con, $_POST['nami']);
     $no_telp = mysqli_real_escape_string($con, $_POST['notp']);
@@ -33,7 +33,7 @@ if (isset($_POST['add_pelanggan'])) {
 
 // Tempat pengecekan Modal Update data
 if (isset($_POST['update_pelanggan'])) {
-    $id_pelanggan = mysqli_real_escape_string($con, $_POST['pelanggan_id']);
+    $id_pelanggan = mysqli_real_escape_string($con, $_POST['id_pelanggan']);
     $nama_depan = mysqli_real_escape_string($con, $_POST['name']);
     $nama_belakang = mysqli_real_escape_string($con, $_POST['nami']);
     $no_telp = mysqli_real_escape_string($con, $_POST['notp']);
@@ -61,9 +61,9 @@ if (isset($_POST['update_pelanggan'])) {
 
 // Tempat pengecekan pelanggan id
 if (isset($_GET['pelanggan_id'])) {
-    $pelanggan_id = mysqli_real_escape_string($con, $_GET['pelanggan_id']);
+    $pelanggan_id = mysqli_real_escape_string($con, $_GET['id_pelanggan']);
 
-    $query = "SELECT * FROM pelanggan WHERE ID='$pelanggan_id'";
+    $query = "SELECT * FROM pelanggan WHERE ID='$id_pelanggan'";
     $query_run = mysqli_query($con, $query);
 
     if (mysqli_num_rows($query_run) == 1) {
@@ -88,10 +88,10 @@ if (isset($_GET['pelanggan_id'])) {
 
 //Tempat pengecekan Modal Delete data
 if (isset($_POST['delete_pelanggan'])) {
-    $pelanggan_id = mysqli_real_escape_string($con, $_POST['pelanggan_id']);
+    $id_pelanggan = mysqli_real_escape_string($con, $_POST['id_pelanggan']);
 
     //Query Delete data
-    $query = "DELETE FROM pelanggan WHERE ID='$pelanggan_id'";
+    $query = "DELETE FROM pelanggan WHERE ID='$id_pelanggan'";
     $query_run = mysqli_query($con, $query);
 
     if ($query_run) {
