@@ -179,7 +179,7 @@ require_once("function.php");
                     },
                     series: [{
                       type: 'column',
-                      name: 'Transaksi',
+                      name: 'Transaksi Per Hari',
                       colorByPoint: true,
                       data: [5412, 4977, 4730, 4437, 3947, 3707, 4143
                       ],
