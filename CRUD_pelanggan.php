@@ -108,5 +108,5 @@ if (isset($_POST['delete_pelanggan'])) {
         ];
         echo json_encode($res);
         return;
-    }//Hello NAMAKU FAYZA AULIA
+    }
 }
